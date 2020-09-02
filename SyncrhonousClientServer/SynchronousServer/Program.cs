@@ -39,10 +39,29 @@ namespace SynchronousServer
 
                     // 6.1. Listen for a connection (blocking call)
                     Socket handler = listener.Accept();
-                    
-                    //while(!gameOver)
+
+                    // 6.2. Process the connection to the read the incoming data
+                    data = "";
+                    while (true)
                     {
-                        // 6.2. Process the connection to the read the incoming data
+                        int bytesRec = handler.Receive(bytes);
+                        data += Encoding.ASCII.GetString(bytes, 0, bytesRec);
+                        if (data.IndexOf("<EOF>") > -1)
+                        {
+                            break;
+                        }
+                    }
+
+                    // 6.3. Process the incoming data
+                    Console.WriteLine("Text received: {0}", data);
+                    TicTacToeGame currGame = new TicTacToeGame(data[0]);
+
+
+                    byte[] msg = Encoding.ASCII.GetBytes(currGame.board.drawBoard());
+                    handler.Send(msg);
+
+                    while (!gameOver)
+                    {
                         data = "";
                         while (true)
                         {
@@ -53,14 +72,7 @@ namespace SynchronousServer
                                 break;
                             }
                         }
-
-                        // 6.3. Process the incoming data
                         Console.WriteLine("Text received: {0}", data);
-                        TicTacToeGame currGame = new TicTacToeGame(data[0]);
-
-
-                        byte[] msg = Encoding.ASCII.GetBytes(currGame.board.drawBoard());
-                        handler.Send(msg);
                     }
 
                     // 6.4. Close connection

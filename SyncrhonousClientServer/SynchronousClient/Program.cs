@@ -13,6 +13,7 @@ namespace SynchronousClient
             byte[] bytes = new byte[1024];
             bool gameOver = false;
             char token;
+            int nextMove;
 
             try
             {
@@ -51,10 +52,39 @@ namespace SynchronousClient
                     // 6. Send the data through the socket
                     int bytesSent = sender.Send(msg);
 
-                    //while(!gameOver)
+                    while(!gameOver)
                     {
                         // 7. Listen for the response (blocking call)
                         int bytesRec = sender.Receive(bytes);
+
+                        // 8. Process the response
+                        Console.WriteLine("Echoed test = {0}", Encoding.ASCII.GetString(bytes, 0, bytesRec));
+
+                        while(true)
+                        {
+                            //Collect next move from user
+                            Console.WriteLine("What cell would you like to play next? (numbered 1-9 LTR):  ");
+                            nextMove = int.Parse(Console.ReadLine());
+
+
+                            //Validate user selection is in range
+                            if (nextMove > 0 && nextMove < 10)
+                            {
+                                break;
+                            } else
+                            {
+                                Console.WriteLine("Invalid selection. Try again.");
+                            }
+                        }
+
+                        // 5. Encode the data to be sent
+                        msg = Encoding.ASCII.GetBytes(nextMove + "<EOF>");
+
+                        // 6. Send the data through the socket
+                        bytesSent = sender.Send(msg);
+
+                        // 7. Listen for the response (blocking call)
+                        bytesRec = sender.Receive(bytes);
 
                         // 8. Process the response
                         Console.WriteLine("Echoed test = {0}", Encoding.ASCII.GetString(bytes, 0, bytesRec));
