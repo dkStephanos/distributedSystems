@@ -1,0 +1,31 @@
+﻿<Properties StartupConfiguration="{40B2A0F7-9EE7-4BF7-B9FB-5C181E72AD76}|Default">
+  <MonoDevelop.Ide.ItemProperties.Synchronous PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="BreakfastAsync/Program.cs">
+    <Files>
+      <File FileName="Synchronous/Program.cs" Line="4" Column="1" />
+      <File FileName="BreakfastAsync/Program.cs" Line="8" Column="18" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="AsyncAwait" expanded="True">
+            <Node name="BreakfastAsync" expanded="True">
+              <Node name="Program.cs" selected="True" />
+            </Node>
+            <Node name="Synchronous" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.BreakfastAsync PreferredExecutionTarget="MonoDevelop.Default" />
+</Properties>

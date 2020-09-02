@@ -1,0 +1,11 @@
+/Users/stephanos/Documents/Dev/Distributed Systems/AsyncAwait/BreakfastAsync/bin/Debug/netcoreapp3.0/BreakfastAsync
+/Users/stephanos/Documents/Dev/Distributed Systems/AsyncAwait/BreakfastAsync/bin/Debug/netcoreapp3.0/BreakfastAsync.deps.json
+/Users/stephanos/Documents/Dev/Distributed Systems/AsyncAwait/BreakfastAsync/bin/Debug/netcoreapp3.0/BreakfastAsync.runtimeconfig.json
+/Users/stephanos/Documents/Dev/Distributed Systems/AsyncAwait/BreakfastAsync/bin/Debug/netcoreapp3.0/BreakfastAsync.runtimeconfig.dev.json
+/Users/stephanos/Documents/Dev/Distributed Systems/AsyncAwait/BreakfastAsync/bin/Debug/netcoreapp3.0/BreakfastAsync.dll
+/Users/stephanos/Documents/Dev/Distributed Systems/AsyncAwait/BreakfastAsync/bin/Debug/netcoreapp3.0/BreakfastAsync.pdb
+/Users/stephanos/Documents/Dev/Distributed Systems/AsyncAwait/BreakfastAsync/obj/Debug/netcoreapp3.0/BreakfastAsync.csprojAssemblyReference.cache
+/Users/stephanos/Documents/Dev/Distributed Systems/AsyncAwait/BreakfastAsync/obj/Debug/netcoreapp3.0/BreakfastAsync.AssemblyInfoInputs.cache
+/Users/stephanos/Documents/Dev/Distributed Systems/AsyncAwait/BreakfastAsync/obj/Debug/netcoreapp3.0/BreakfastAsync.AssemblyInfo.cs
+/Users/stephanos/Documents/Dev/Distributed Systems/AsyncAwait/BreakfastAsync/obj/Debug/netcoreapp3.0/BreakfastAsync.dll
+/Users/stephanos/Documents/Dev/Distributed Systems/AsyncAwait/BreakfastAsync/obj/Debug/netcoreapp3.0/BreakfastAsync.pdb

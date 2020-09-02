@@ -1,0 +1,11 @@
+/Users/stephanos/Documents/Dev/Distributed Systems/AsyncAwait/Synchronous/bin/Debug/netcoreapp3.0/Synchronous
+/Users/stephanos/Documents/Dev/Distributed Systems/AsyncAwait/Synchronous/bin/Debug/netcoreapp3.0/Synchronous.deps.json
+/Users/stephanos/Documents/Dev/Distributed Systems/AsyncAwait/Synchronous/bin/Debug/netcoreapp3.0/Synchronous.runtimeconfig.json
+/Users/stephanos/Documents/Dev/Distributed Systems/AsyncAwait/Synchronous/bin/Debug/netcoreapp3.0/Synchronous.runtimeconfig.dev.json
+/Users/stephanos/Documents/Dev/Distributed Systems/AsyncAwait/Synchronous/bin/Debug/netcoreapp3.0/Synchronous.dll
+/Users/stephanos/Documents/Dev/Distributed Systems/AsyncAwait/Synchronous/bin/Debug/netcoreapp3.0/Synchronous.pdb
+/Users/stephanos/Documents/Dev/Distributed Systems/AsyncAwait/Synchronous/obj/Debug/netcoreapp3.0/Synchronous.csprojAssemblyReference.cache
+/Users/stephanos/Documents/Dev/Distributed Systems/AsyncAwait/Synchronous/obj/Debug/netcoreapp3.0/Synchronous.AssemblyInfoInputs.cache
+/Users/stephanos/Documents/Dev/Distributed Systems/AsyncAwait/Synchronous/obj/Debug/netcoreapp3.0/Synchronous.AssemblyInfo.cs
+/Users/stephanos/Documents/Dev/Distributed Systems/AsyncAwait/Synchronous/obj/Debug/netcoreapp3.0/Synchronous.dll
+/Users/stephanos/Documents/Dev/Distributed Systems/AsyncAwait/Synchronous/obj/Debug/netcoreapp3.0/Synchronous.pdb
