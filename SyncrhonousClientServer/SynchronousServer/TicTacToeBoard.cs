@@ -3,11 +3,11 @@ namespace SynchronousServer
 {
     public class TicTacToeBoard
     {
-        public string[] boardCells;
+        public char[] boardCells;
 
         public TicTacToeBoard()
         {
-            this.boardCells = new string[] { " ", " ", " ", " ", " ", " ", " ", " ", " " };
+            this.boardCells = new char[] { ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ' };
         }
 
         public string drawBoard()

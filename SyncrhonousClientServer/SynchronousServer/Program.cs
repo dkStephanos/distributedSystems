@@ -12,6 +12,7 @@ namespace SynchronousServer
             // 1. Allocate a buffer to store incoming data
             byte[] bytes = new byte[1024];
             string data;
+            string result;
             bool gameOver = false;
             
             // 2. Establish a loal endpoint for the socket (ip and port)
@@ -73,6 +74,25 @@ namespace SynchronousServer
                             }
                         }
                         Console.WriteLine("Text received: {0}", data);
+
+                        result = currGame.playTurn((int)Char.GetNumericValue(data[0]) - 1);
+
+                        if(result == "None")
+                        {
+                            msg = Encoding.ASCII.GetBytes(currGame.board.drawBoard());
+                            handler.Send(msg);
+                        }
+                        else if(result == "Invalid")
+                        {
+                            msg = Encoding.ASCII.GetBytes("Invalid selection. Try again.");
+                            handler.Send(msg);
+
+                        }
+                        else
+                        {
+                            msg = Encoding.ASCII.GetBytes(result + "\n" + currGame.board.drawBoard());
+                            handler.Send(msg);
+                        }
                     }
 
                     // 6.4. Close connection

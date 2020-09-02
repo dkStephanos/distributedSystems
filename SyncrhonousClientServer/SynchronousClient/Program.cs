@@ -52,29 +52,39 @@ namespace SynchronousClient
                     // 6. Send the data through the socket
                     int bytesSent = sender.Send(msg);
 
-                    while(!gameOver)
+                    // 7. Listen for the response (blocking call)
+                    int bytesRec = sender.Receive(bytes);
+
+                    // 8. Process the response
+                    Console.WriteLine("New game: \n{0}", Encoding.ASCII.GetString(bytes, 0, bytesRec));
+
+                    while (!gameOver)
                     {
-                        // 7. Listen for the response (blocking call)
-                        int bytesRec = sender.Receive(bytes);
-
-                        // 8. Process the response
-                        Console.WriteLine("Echoed test = {0}", Encoding.ASCII.GetString(bytes, 0, bytesRec));
-
+                        
                         while(true)
                         {
                             //Collect next move from user
                             Console.WriteLine("What cell would you like to play next? (numbered 1-9 LTR):  ");
-                            nextMove = int.Parse(Console.ReadLine());
-
-
-                            //Validate user selection is in range
-                            if (nextMove > 0 && nextMove < 10)
+                            try
                             {
-                                break;
-                            } else
+                                nextMove = int.Parse(Console.ReadLine());
+
+                                //Validate user selection is in range
+                                if (nextMove > 0 && nextMove < 10)
+                                {
+                                    break;
+                                }
+                                else
+                                {
+                                    Console.WriteLine("Invalid selection. Try again.");
+                                }
+                            }
+                            catch
                             {
                                 Console.WriteLine("Invalid selection. Try again.");
                             }
+
+                            
                         }
 
                         // 5. Encode the data to be sent
@@ -87,7 +97,10 @@ namespace SynchronousClient
                         bytesRec = sender.Receive(bytes);
 
                         // 8. Process the response
-                        Console.WriteLine("Echoed test = {0}", Encoding.ASCII.GetString(bytes, 0, bytesRec));
+                        Console.WriteLine("{0}", Encoding.ASCII.GetString(bytes, 0, bytesRec));
+
+                        // Check for final result
+                        gameOver |= (Encoding.ASCII.GetString(bytes, 0, bytesRec).Contains("won!") || Encoding.ASCII.GetString(bytes, 0, bytesRec).Contains("Draw"));
                     }
 
                     // 9. Close the socket
