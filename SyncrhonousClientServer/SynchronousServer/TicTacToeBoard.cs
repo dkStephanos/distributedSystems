@@ -3,32 +3,34 @@ namespace SynchronousServer
 {
     public class TicTacToeBoard
     {
+        public string[] boardCells;
+
         public TicTacToeBoard()
         {
-            string[] boardCells = new string[9];
+            this.boardCells = new string[] { " ", " ", " ", " ", " ", " ", " ", " ", " " };
         }
 
-        private static string drawBoard(string[] boardCells)
+        public string drawBoard()
         {
-            string currBoard = "";
+            string currBoard = "\n";
 
-            currBoard += "     |     |      ";
+            currBoard += "     |     |      \n";
 
-            currBoard += String.Format("  {0}  |  {1}  |  {2}", boardCells[0], boardCells[1], boardCells[2]);
+            currBoard += String.Format("  {0}  |  {1}  |  {2}\n", boardCells[0], boardCells[1], boardCells[2]);
 
-            currBoard += "_____|_____|_____ ";
+            currBoard += "_____|_____|_____ \n";
 
-            currBoard += "     |     |      ";
+            currBoard += "     |     |      \n";
 
-            currBoard += String.Format("  {0}  |  {1}  |  {2}", boardCells[3], boardCells[4], boardCells[5]);
+            currBoard += String.Format("  {0}  |  {1}  |  {2}\n", boardCells[3], boardCells[4], boardCells[5]);
 
-            currBoard += "_____|_____|_____ ";
+            currBoard += "_____|_____|_____ \n";
 
-            currBoard += "     |     |      ";
+            currBoard += "     |     |      \n";
 
-            currBoard += String.Format("  {0}  |  {1}  |  {2}", boardCells[6], boardCells[7], boardCells[8]);
+            currBoard += String.Format("  {0}  |  {1}  |  {2}\n", boardCells[6], boardCells[7], boardCells[8]);
 
-            currBoard += "     |     |      ";
+            currBoard += "     |     |      \n";
 
             return currBoard;
 

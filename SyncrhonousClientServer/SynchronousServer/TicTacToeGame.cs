@@ -4,13 +4,18 @@ namespace SynchronousServer
     public class TicTacToeGame
     {
 
-        string playerChoice;
-        TicTacToeBoard board;
+        public string playerToken;
+        public TicTacToeBoard board;
 
-        public TicTacToeGame(string playerChoice)
+        public TicTacToeGame(string playerToken)
         {
-            this.playerChoice = playerChoice;
+            this.playerToken = playerToken;
             this.board = new TicTacToeBoard();
+        }
+
+        public void playTurn(string token, int position)
+        {
+            board.boardCells[position] = token;
         }
 
         public static string checkForResult(string[] boardCells)
@@ -64,7 +69,7 @@ namespace SynchronousServer
             }
 
             //Finally, check for draw 
-            else if (arr[1] != '1' && arr[2] != '2' && arr[3] != '3' && arr[4] != '4' && arr[5] != '5' && arr[6] != '6' && arr[7] != '7' && arr[8] != '8' && arr[9] != '9')
+            else if (boardCells[0] != " " && boardCells[1] != " " && boardCells[2] != " " && boardCells[3] != " " && boardCells[4] != " " && boardCells[5] != " " && boardCells[6] != " " && boardCells[7] != " " && boardCells[8] != " ")
             {
                 return "Draw";
             }

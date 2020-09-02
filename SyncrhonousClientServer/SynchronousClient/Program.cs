@@ -29,7 +29,7 @@ namespace SynchronousClient
                     sender.Connect(remoteEP);
                     Console.WriteLine("Socket connected to {0}", sender.RemoteEndPoint.ToString());
 
-                   while(!gameOver)
+                   //while(!gameOver)
                     {
                         // 5. Encode the data to be sent
                         byte[] msg = Encoding.ASCII.GetBytes("This is a test<EOF>");

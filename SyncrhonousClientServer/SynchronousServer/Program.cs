@@ -40,7 +40,7 @@ namespace SynchronousServer
                     // 6.1. Listen for a connection (blocking call)
                     Socket handler = listener.Accept();
                     
-                    while(!gameOver)
+                    //while(!gameOver)
                     {
                         // 6.2. Process the connection to the read the incoming data
                         data = "";
@@ -56,7 +56,10 @@ namespace SynchronousServer
 
                         // 6.3. Process the incoming data
                         Console.WriteLine("Text received: {0}", data);
-                        byte[] msg = Encoding.ASCII.GetBytes(data);
+
+                        TicTacToeBoard board = new TicTacToeBoard();
+
+                        byte[] msg = Encoding.ASCII.GetBytes(board.drawBoard());
                         handler.Send(msg);
                     }
 
