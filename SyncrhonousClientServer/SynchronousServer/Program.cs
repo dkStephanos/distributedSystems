@@ -13,7 +13,7 @@ namespace SynchronousServer
             byte[] bytes = new byte[1024];
             string data;
             bool gameOver = false;
-
+            
             // 2. Establish a loal endpoint for the socket (ip and port)
             IPHostEntry IPHostInfo = Dns.GetHostEntry(Dns.GetHostName());
             IPAddress ipAddress = IPHostInfo.AddressList[0];
@@ -56,10 +56,10 @@ namespace SynchronousServer
 
                         // 6.3. Process the incoming data
                         Console.WriteLine("Text received: {0}", data);
+                        TicTacToeGame currGame = new TicTacToeGame(data[0]);
 
-                        TicTacToeBoard board = new TicTacToeBoard();
 
-                        byte[] msg = Encoding.ASCII.GetBytes(board.drawBoard());
+                        byte[] msg = Encoding.ASCII.GetBytes(currGame.board.drawBoard());
                         handler.Send(msg);
                     }
 

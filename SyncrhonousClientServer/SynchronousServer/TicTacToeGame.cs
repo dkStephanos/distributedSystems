@@ -4,18 +4,20 @@ namespace SynchronousServer
     public class TicTacToeGame
     {
 
-        public string playerToken;
+        public char playerToken;
         public TicTacToeBoard board;
 
-        public TicTacToeGame(string playerToken)
+        public TicTacToeGame(char playerToken)
         {
             this.playerToken = playerToken;
             this.board = new TicTacToeBoard();
         }
 
-        public void playTurn(string token, int position)
+        public string playTurn(string token, int position)
         {
             board.boardCells[position] = token;
+
+            return checkForResult(board.boardCells);
         }
 
         public static string checkForResult(string[] boardCells)

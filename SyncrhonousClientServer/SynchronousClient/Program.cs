@@ -12,6 +12,7 @@ namespace SynchronousClient
             // 1. Allocate a buffer to store incoming data
             byte[] bytes = new byte[1024];
             bool gameOver = false;
+            char token;
 
             try
             {
@@ -29,14 +30,29 @@ namespace SynchronousClient
                     sender.Connect(remoteEP);
                     Console.WriteLine("Socket connected to {0}", sender.RemoteEndPoint.ToString());
 
-                   //while(!gameOver)
+
+                    while(true)
                     {
-                        // 5. Encode the data to be sent
-                        byte[] msg = Encoding.ASCII.GetBytes("This is a test<EOF>");
+                        //Get token selection from user
+                        Console.WriteLine("Welcome to Server TicTacToe! Select X or O:  ");
+                        token = Console.ReadLine()[0];
+                        if(token == 'O' || token == 'X')
+                        {
+                            break;
+                        } else
+                        {
+                            Console.WriteLine("Invalid selection!!!");
+                        }
+                    }
 
-                        // 6. Send the data through the socket
-                        int bytesSent = sender.Send(msg);
+                    // 5. Encode the data to be sent
+                    byte[] msg = Encoding.ASCII.GetBytes(token + "<EOF>");
 
+                    // 6. Send the data through the socket
+                    int bytesSent = sender.Send(msg);
+
+                    //while(!gameOver)
+                    {
                         // 7. Listen for the response (blocking call)
                         int bytesRec = sender.Receive(bytes);
 
