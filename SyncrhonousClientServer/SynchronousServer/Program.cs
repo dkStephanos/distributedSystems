@@ -84,7 +84,7 @@ namespace SynchronousServer
                         }
                         else if(result == "Invalid")
                         {
-                            msg = Encoding.ASCII.GetBytes("Invalid selection. Try again.");
+                            msg = Encoding.ASCII.GetBytes("Invalid selection. Try again." + "\n" + currGame.board.drawBoard());
                             handler.Send(msg);
 
                         }

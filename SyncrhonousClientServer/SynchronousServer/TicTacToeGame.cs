@@ -15,6 +15,11 @@ namespace SynchronousServer
 
         public string playTurn(int position)
         {
+            if(board.boardCells[position] != ' ')
+            {
+                return "Invalid";
+            }
+
             board.boardCells[position] = playerToken;
 
             return checkForResult(board.boardCells);
