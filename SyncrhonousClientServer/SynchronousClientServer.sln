@@ -1,0 +1,23 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SynchronousServer", "SynchronousServer\SynchronousServer.csproj", "{CAD81DC0-80B5-4423-BB0F-3A0B45F78865}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SynchronousClient", "SynchronousClient\SynchronousClient.csproj", "{CD980D7D-2456-47F4-999D-28DE643F0E6B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CAD81DC0-80B5-4423-BB0F-3A0B45F78865}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CAD81DC0-80B5-4423-BB0F-3A0B45F78865}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CAD81DC0-80B5-4423-BB0F-3A0B45F78865}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CAD81DC0-80B5-4423-BB0F-3A0B45F78865}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD980D7D-2456-47F4-999D-28DE643F0E6B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD980D7D-2456-47F4-999D-28DE643F0E6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD980D7D-2456-47F4-999D-28DE643F0E6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD980D7D-2456-47F4-999D-28DE643F0E6B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

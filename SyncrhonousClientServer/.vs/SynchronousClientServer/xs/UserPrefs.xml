@@ -1,0 +1,35 @@
+﻿<Properties StartupConfiguration="Multiple Projects">
+  <MonoDevelop.Ide.Workbench ActiveDocument="SynchronousClient/Program.cs">
+    <Files>
+      <File FileName="SynchronousServer/Program.cs" Line="22" Column="104" />
+      <File FileName="SynchronousClient/Program.cs" Line="9" Column="6" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="SynchronousClientServer" expanded="True">
+            <Node name="SynchronousClient" expanded="True">
+              <Node name="Program.cs" selected="True" />
+            </Node>
+            <Node name="SynchronousServer" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations>
+    <MultiItemSolutionRunConfiguration Id="Multiple Projects" Name="Multiple Projects">
+      <Items>
+        <StartupItem ItemId="{CD980D7D-2456-47F4-999D-28DE643F0E6B}" ItemName="SynchronousClient" ConfigurationId="Default" />
+        <StartupItem ItemId="{CAD81DC0-80B5-4423-BB0F-3A0B45F78865}" ItemName="SynchronousServer" ConfigurationId="Default" />
+      </Items>
+    </MultiItemSolutionRunConfiguration>
+  </MultiItemStartupConfigurations>
+  <MonoDevelop.Ide.ItemProperties.SynchronousServer PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.ItemProperties.SynchronousClient PreferredExecutionTarget="MonoDevelop.Default" />
+</Properties>

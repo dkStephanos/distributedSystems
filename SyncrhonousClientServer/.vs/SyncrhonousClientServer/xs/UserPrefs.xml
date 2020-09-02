@@ -1,0 +1,25 @@
+﻿<Properties StartupConfiguration="{CAD81DC0-80B5-4423-BB0F-3A0B45F78865}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="SynchronousServer/Program.cs">
+    <Files>
+      <File FileName="SynchronousServer/Program.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="SyncrhonousClientServer" expanded="True">
+            <Node name="SynchronousServer" expanded="True">
+              <Node name="Program.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.SynchronousServer FirstBuild="True" PreferredExecutionTarget="MonoDevelop.Default" />
+</Properties>

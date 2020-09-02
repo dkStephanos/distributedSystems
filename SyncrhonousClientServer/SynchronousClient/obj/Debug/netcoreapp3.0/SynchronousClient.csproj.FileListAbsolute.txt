@@ -1,0 +1,11 @@
+/Users/stephanos/Documents/Dev/Distributed Systems/SyncrhonousClientServer/SynchronousClient/bin/Debug/netcoreapp3.0/SynchronousClient
+/Users/stephanos/Documents/Dev/Distributed Systems/SyncrhonousClientServer/SynchronousClient/bin/Debug/netcoreapp3.0/SynchronousClient.deps.json
+/Users/stephanos/Documents/Dev/Distributed Systems/SyncrhonousClientServer/SynchronousClient/bin/Debug/netcoreapp3.0/SynchronousClient.runtimeconfig.json
+/Users/stephanos/Documents/Dev/Distributed Systems/SyncrhonousClientServer/SynchronousClient/bin/Debug/netcoreapp3.0/SynchronousClient.runtimeconfig.dev.json
+/Users/stephanos/Documents/Dev/Distributed Systems/SyncrhonousClientServer/SynchronousClient/bin/Debug/netcoreapp3.0/SynchronousClient.dll
+/Users/stephanos/Documents/Dev/Distributed Systems/SyncrhonousClientServer/SynchronousClient/bin/Debug/netcoreapp3.0/SynchronousClient.pdb
+/Users/stephanos/Documents/Dev/Distributed Systems/SyncrhonousClientServer/SynchronousClient/obj/Debug/netcoreapp3.0/SynchronousClient.csprojAssemblyReference.cache
+/Users/stephanos/Documents/Dev/Distributed Systems/SyncrhonousClientServer/SynchronousClient/obj/Debug/netcoreapp3.0/SynchronousClient.AssemblyInfoInputs.cache
+/Users/stephanos/Documents/Dev/Distributed Systems/SyncrhonousClientServer/SynchronousClient/obj/Debug/netcoreapp3.0/SynchronousClient.AssemblyInfo.cs
+/Users/stephanos/Documents/Dev/Distributed Systems/SyncrhonousClientServer/SynchronousClient/obj/Debug/netcoreapp3.0/SynchronousClient.dll
+/Users/stephanos/Documents/Dev/Distributed Systems/SyncrhonousClientServer/SynchronousClient/obj/Debug/netcoreapp3.0/SynchronousClient.pdb
