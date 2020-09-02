@@ -1,15 +1,25 @@
 ﻿using System;
+using System.Collections.Generic;
+
 namespace SynchronousServer
 {
     public class TicTacToeGame
     {
 
         public char playerToken;
+        public char cpuToken;
         public TicTacToeBoard board;
 
         public TicTacToeGame(char playerToken)
         {
             this.playerToken = playerToken;
+            if(playerToken == 'X')
+            {
+                this.cpuToken = 'O';
+            } else
+            {
+                this.cpuToken = 'X';
+            }
             this.board = new TicTacToeBoard();
         }
 
@@ -21,6 +31,10 @@ namespace SynchronousServer
             }
 
             board.boardCells[position] = playerToken;
+
+            var random = new Random();
+            List<int> openCells = getOpenCells();
+            board.boardCells[openCells[random.Next(openCells.Count)]] = cpuToken;
 
             return checkForResult(board.boardCells);
         }
@@ -83,6 +97,21 @@ namespace SynchronousServer
 
             //If we get this far, there is no outcome yet, return None
             return "None";
+        }
+
+        public List<int> getOpenCells()
+        {
+            List<int> openCells = new List<int>();
+
+            for (int i = 0; i < board.boardCells.Length; i++)
+            {
+                if(board.boardCells[i] == ' ')
+                {
+                    openCells.Add(i);
+                }
+            }
+
+            return openCells;
         }
     }
 }
