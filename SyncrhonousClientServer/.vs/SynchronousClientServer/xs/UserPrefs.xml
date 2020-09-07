@@ -1,19 +1,19 @@
 ﻿<Properties StartupConfiguration="Multiple Projects">
-  <MonoDevelop.Ide.Workbench ActiveDocument="SynchronousServer/TicTacToeGame.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="SynchronousClient/Program.cs">
     <Files>
-      <File FileName="SynchronousServer/Program.cs" Line="87" Column="126" />
-      <File FileName="SynchronousClient/Program.cs" />
-      <File FileName="SynchronousServer/TicTacToeBoard.cs" />
-      <File FileName="SynchronousServer/TicTacToeGame.cs" Line="37" Column="82" />
+      <File FileName="SynchronousServer/Program.cs" Line="105" Column="27" />
+      <File FileName="SynchronousClient/Program.cs" Line="19" Column="14" />
+      <File FileName="SynchronousServer/TicTacToeBoard.cs" Line="14" Column="10" />
+      <File FileName="SynchronousServer/TicTacToeGame.cs" Line="98" Column="79" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="SynchronousClientServer" expanded="True">
-            <Node name="SynchronousClient" expanded="True" />
-            <Node name="SynchronousServer" expanded="True">
-              <Node name="TicTacToeGame.cs" selected="True" />
+            <Node name="SynchronousClient" expanded="True">
+              <Node name="Program.cs" selected="True" />
             </Node>
+            <Node name="SynchronousServer" expanded="True" />
           </Node>
         </State>
       </Pad>
