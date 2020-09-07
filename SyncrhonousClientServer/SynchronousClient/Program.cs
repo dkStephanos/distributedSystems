@@ -13,7 +13,7 @@ namespace SynchronousClient
 
             while (true)
             {
-                Console.WriteLine("Welcome to Server TicTacToe! Select X or O:  ");
+                Console.WriteLine("Welcome to the Tic-Tac-Server. Are you playing X or O?  ");
                 token = Console.ReadLine()[0];
 
                 if (token == 'O' || token == 'X')
