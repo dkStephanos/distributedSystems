@@ -53,16 +53,18 @@ namespace SynchronousServer
                         }
                     }
 
-                    // 6.3. Process the incoming data
+                    // 6.3. Process the incoming data && create a new game with the clients selection (X or O)
                     Console.WriteLine("Text received: {0}", data);
                     TicTacToeGame currGame = new TicTacToeGame(data[0]);
 
-
+                    // 6.4. Get the starting game board and encode/send it to the client
                     byte[] msg = Encoding.ASCII.GetBytes(currGame.board.drawBoard());
                     handler.Send(msg);
 
+                    // 7. Enter the game loop
                     while (!gameOver)
                     {
+                        // 7.1. Read in the next move from the client
                         data = "";
                         while (true)
                         {
@@ -75,27 +77,32 @@ namespace SynchronousServer
                         }
                         Console.WriteLine("Text received: {0}", data);
 
+                        // 7.2. Attempt the client's selected move
                         result = currGame.playTurn((int)Char.GetNumericValue(data[0]) - 1);
 
-                        if(result == "None")
+                        // 7.3. Process the result of the played turn.
+                        if(result == "Not Finsihed")
                         {
+                            // If we aren't finished, draw the current board/encode it/send it to the client
                             msg = Encoding.ASCII.GetBytes(currGame.board.drawBoard());
                             handler.Send(msg);
                         }
                         else if(result == "Invalid")
                         {
+                            // If the client selected an invalid space, attach a warning to the previous game board and encode/send to client
                             msg = Encoding.ASCII.GetBytes("Invalid selection. Try again." + "\n" + currGame.board.drawBoard());
                             handler.Send(msg);
 
                         }
                         else
                         {
+                            // Else, we have a final result from the game, so encode the result and the final game board and send to client
                             msg = Encoding.ASCII.GetBytes(result + "\n" + currGame.board.drawBoard());
                             handler.Send(msg);
                         }
                     }
 
-                    // 6.4. Close connection
+                    // 6.5. Close connection
                     handler.Shutdown(SocketShutdown.Both);
                     handler.Close();
 
@@ -105,6 +112,7 @@ namespace SynchronousServer
             {
                 Console.WriteLine(e);
             }
+
             Console.WriteLine("\nPress ENTER to exit...");
             Console.Read();
         }

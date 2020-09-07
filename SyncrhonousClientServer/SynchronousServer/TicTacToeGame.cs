@@ -95,8 +95,8 @@ namespace SynchronousServer
                 return "Draw";
             }
 
-            //If we get this far, there is no outcome yet, return None
-            return "None";
+            //If we get this far, there is no outcome yet, return Not Finished
+            return "Not Finished";
         }
 
         public List<int> getOpenCells()
